@@ -303,7 +303,6 @@ export default function Dashboard() {
     { key: 'Completed', label: 'Completed' },
     { key: 'High Priority', label: 'High Priority' },
     { key: 'Activity', label: 'Activity Log' },
-    { key: 'Profile', label: 'Profile' },
   ]
 
   const isTaskView = ['Dashboard', 'Pending', 'Completed', 'High Priority'].includes(view)
@@ -351,8 +350,10 @@ export default function Dashboard() {
             {isTaskView && (
               <button className="btn-primary btn-sm" onClick={() => setModal({ type: 'create' })}>+ New Task</button>
             )}
-            <div className="db-avatar">{initials}</div>
-            <span className="db-username">{user?.name || user?.email?.split('@')[0] || 'User'}</span>
+            <div className="db-user-btn" onClick={() => handleNav('Profile')}>
+              <div className="db-avatar">{initials}</div>
+              <span className="db-username">{user?.name || user?.email?.split('@')[0] || 'User'}</span>
+            </div>
           </div>
         </header>
 

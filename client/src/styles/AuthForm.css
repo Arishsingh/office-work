@@ -1,4 +1,3 @@
-/* ── Base ─────────────────────────────── */
 .konekta-container {
   display: flex;
   min-height: 100vh;
@@ -7,7 +6,6 @@
   overflow: hidden;
 }
 
-/* ── Left panel (image) ───────────────── */
 .konekta-left {
   flex: 1;
   background: #000000;
@@ -38,7 +36,6 @@
   box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
 }
 
-/* ── Right panel (form) ───────────────── */
 .konekta-right {
   flex: 1;
   display: flex;
@@ -53,7 +50,6 @@
   max-width: 400px;
 }
 
-/* ── Typography ───────────────────────── */
 .konekta-title {
   font-size: 2rem;
   font-weight: 300;
@@ -69,7 +65,6 @@
   margin: 0 0 28px 0;
 }
 
-/* ── Form elements ────────────────────── */
 .konekta-form-group {
   margin-bottom: 18px;
 }
@@ -126,7 +121,6 @@
 
 .toggle-password:hover { opacity: 1; }
 
-/* ── Remember / Forgot ─────────────────── */
 .konekta-remember {
   display: flex;
   align-items: center;
@@ -161,7 +155,6 @@
 
 .konekta-forgot:hover { color: #cccccc; }
 
-/* ── Button ───────────────────────────── */
 .konekta-login-button {
   width: 100%;
   padding: 13px;
@@ -188,7 +181,6 @@
 
 .konekta-login-button:disabled { opacity: 0.7; cursor: not-allowed; }
 
-/* ── Footer / Switch link ─────────────── */
 .konekta-footer {
   text-align: center;
   color: #999;
@@ -209,7 +201,6 @@
 
 .konekta-signup-link:hover { color: #cccccc; }
 
-/* ── Messages ─────────────────────────── */
 .konekta-error {
   background: rgba(255, 80, 80, 0.1);
   border: 1px solid rgba(255, 80, 80, 0.3);
@@ -230,15 +221,11 @@
   font-size: 0.83rem;
 }
 
-/* ── Responsive ───────────────────────── */
-
-/* Tablet landscape */
 @media (max-width: 1024px) {
   .konekta-right { padding: 40px 32px; }
   .konekta-left { padding: 30px; }
 }
 
-/* Tablet portrait — stack vertically, hide image */
 @media (max-width: 768px) {
   .konekta-container {
     flex-direction: column;
@@ -248,7 +235,7 @@
   }
 
   .konekta-left {
-    display: none; /* hide image on tablet/mobile to save space */
+    display: none;
   }
 
   .konekta-right {
@@ -266,10 +253,9 @@
   .konekta-title { font-size: 1.8rem; }
 }
 
-/* Mobile */
 @media (max-width: 480px) {
   .konekta-right { padding: 32px 20px; padding-top: 48px; }
   .konekta-title { font-size: 1.5rem; }
-  .konekta-input { font-size: 16px; } /* prevent iOS zoom */
+  .konekta-input { font-size: 16px; }
   .konekta-login-button { padding: 14px; font-size: 0.85rem; }
 }
